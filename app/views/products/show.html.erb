@@ -1,0 +1,13 @@
+<h1>Item page</h1>
+
+<div><%= @product.name %></div>
+
+<div><%= link_to 'Products', products_path %></div>
+
+<div><%= link_to 'Edit Item', edit_product_path(@product) %></div>
+<div>
+    <%= link_to 'Delete', @product, data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+    } %>
+</div>
